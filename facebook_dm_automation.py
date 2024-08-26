@@ -10,7 +10,7 @@ import airtable
 # Airtable setup with hard-coded values for demonstration
 AIRTABLE_API_KEY = 'patW58995GtHx4BN4.28075217beda1a18795645d602af45b8db94675a421782ccf402168428d00a54'
 BASE_ID = 'appI64PUzTzKr7r5H'
-TABLE_NAME = 'your_table_name'  # Replace with your actual table name
+TABLE_NAME = 'Sheet1'  # Replace with your actual table name
 
 # Initialize Airtable connection
 at = airtable.Airtable(BASE_ID, TABLE_NAME, AIRTABLE_API_KEY)
