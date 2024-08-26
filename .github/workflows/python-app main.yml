@@ -1,0 +1,35 @@
+name: Python application
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run script
+      env:
+        AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+        AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+        AIRTABLE_TABLE_NAME: ${{ secrets.AIRTABLE_TABLE_NAME }}
+      run: |
+        python facebook_automation.py
