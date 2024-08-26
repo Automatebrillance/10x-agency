@@ -1,0 +1,13 @@
+# Browser automation library
+selenium==4.10.0  # Ensures compatibility with your code and avoids breaking changes in future releases
+
+# Airtable API wrapper
+airtable-python-wrapper==0.15.2  # Provides an interface for interacting with Airtable's API
+
+# Web driver manager (optional but useful for managing browser drivers automatically)
+webdriver-manager==4.0.0  # Automatically downloads and manages browser drivers (e.g., ChromeDriver)
+
+# Additional useful packages (Optional)
+requests==2.31.0  # For making HTTP requests, useful for interacting with web APIs
+beautifulsoup4==4.12.2  # For parsing HTML, useful if you need to extract information from web pages
+pandas==2.1.0  # Useful for data manipulation, particularly if you need to handle data before sending DMs
